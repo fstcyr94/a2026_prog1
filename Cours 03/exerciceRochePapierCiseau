@@ -1,0 +1,19 @@
+import random   
+
+choix = ["Roche", "Papier", "Ciseaux"]
+
+print("choisissez : 0 = Roche, 1 = Papier, 2 = Ciseau")
+joueur = 2 # le choix à modifier 
+ordinateur = random.randint(0, 2) # valeur aléatoire entre 0 et 2 inclusivement
+
+print(f"Vous avez choisi : {choix[joueur]}")
+print(f"L'ordinateur a choisi : {choix[ordinateur]}")
+
+resultat = (joueur - ordinateur + 3) % 3
+
+if resultat == 0:
+    print("Égalité !")
+elif resultat == 1:
+    print("Vous gagnez !")
+else:
+    print("L'ordinateur gagne!")
